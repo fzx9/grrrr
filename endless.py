@@ -126,13 +126,6 @@ async def test(ctx):#Check for online bot
     await bot.say("Testing...")
 
 
-@bot.command(pass_context=True)
-async def usage(ctx):
-    await bot.say("https://docs.google.com/document/d/10CuYlrBqGDuoSSs8iHh8ovWIM0Tz6KYlozkz3JI1AwA/edit?usp=sharing")
-
-
-
-
                             
 bot.loop.create_task(wallchecking())
 #Bot token
