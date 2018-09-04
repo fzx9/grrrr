@@ -22,7 +22,7 @@ async def wallchecking():
     global wallsTime
     global count
     channel = discord.Object(id="459437789856006155")#Gets the walls channel id
-    message = "<@&432210951299923969> check walls!"#Mentions the 'Endless' role
+    message = "<@&486603238427066369> check walls!"#Mentions the 'Endless' role
     while wallsOn == False:#While walls are off
         await asyncio.sleep(3)#Checks every second
         if wallsOn == True:#Checks whether walls are on or not
@@ -36,7 +36,7 @@ async def wallchecking():
 @bot.command(pass_context=True)
 async def check(ctx):
     global count#Calls the global variable
-    if "432210951299923969" in [role.id for role in ctx.message.author.roles]:#Must have endless role
+    if "486603238427066369" in [role.id for role in ctx.message.author.roles]:#Must have endless role
         if wallsOn == True:#Checks wall checking is turned on            
             count = 0#Count is reset to 0
             await bot.say(ctx.message.author.mention+" has checked walls!")#Confirmation message
@@ -48,7 +48,7 @@ async def check(ctx):
 
 @bot.command(pass_context=True)
 async def weewoo(ctx, side:str = None):
-    if "432210951299923969" in [role.id for role in ctx.message.author.roles]:#Must have endless role
+    if "486603238427066369" in [role.id for role in ctx.message.author.roles]:#Must have endless role
         channel = discord.Object(id="459437789856006155")
         if side is None:
             await bot.say("You need to specify a side that we are being raided from!")
